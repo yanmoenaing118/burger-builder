@@ -1,8 +1,6 @@
 import React from "react";
 
-import PropTypes from "prop-types";
-
-import classes from "./BurgerIngredients.module.css";
+import classes from "./BurgerIngredient.module.css";
 
 class BurgerIngredients extends React.Component {
   render() {
@@ -19,6 +17,7 @@ class BurgerIngredients extends React.Component {
             <div className={classes.Seeds2}></div>
           </div>
         );
+        break;
       case "meat":
         ingredient = <div className={classes.Meat}></div>;
         break;
@@ -37,9 +36,5 @@ class BurgerIngredients extends React.Component {
     return ingredient;
   }
 }
-
-BurgerIngredients.PropTypes = {
-  type: PropTypes.string.isRequired,
-};
 
 export default BurgerIngredients;
